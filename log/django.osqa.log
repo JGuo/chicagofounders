@@ -1,0 +1,232 @@
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/handlers/base.py TIME: 2011-05-25 15:31:25,126 MSG: base.py:handle_uncaught_exception:209 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/Users/jisiguo/Desktop/osqa/forum/middleware/anon_user.py", line 34, in process_request
+    msg = _('First time here? Check out the <a href="%s">FAQ</a>!') % reverse('faq')
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 391, in reverse
+    *args, **kwargs)))
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 312, in reverse
+    possibilities = self.reverse_dict.getlist(lookup_view)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 229, in _get_reverse_dict
+    self._populate()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 208, in _populate
+    for name in pattern.reverse_dict:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 229, in _get_reverse_dict
+    self._populate()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 197, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 279, in _get_url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 274, in _get_urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/jisiguo/Desktop/osqa/forum/urls.py", line 23, in <module>
+    url(r'^%s(.*)' % _('nimda/'), admin.site.root),
+AttributeError: 'AdminSite' object has no attribute 'root'
+/Users/jisiguo/Desktop/osqa/forum/views/meta.py TIME: 2011-05-25 15:31:25,287 MSG: meta.py:error_handler:200 
+        error executing request:
+        PATH: /
+        USER: <anonymous>
+        METHOD: GET
+        POST PARAMETERS:
+        None
+        GET PARAMETERS:
+        None
+        HTTP HEADERS:
+        		RUN_MAIN: true
+		SERVER_SOFTWARE: WSGIServer/0.1 Python/2.7.1
+		TERM_PROGRAM_VERSION: 273.1
+		REQUEST_METHOD: GET
+		SERVER_PROTOCOL: HTTP/1.1
+		HOME: /Users/jisiguo
+		DISPLAY: /tmp/launch-6uoSL9/org.x:0
+		TERM_PROGRAM: Apple_Terminal
+		LANG: en_US.UTF-8
+		SHELL: /bin/bash
+		TMPDIR: /var/folders/J0/J074dEMLEtipktHjkwusKk+++TI/-Tmp-/
+		SERVER_PORT: 8000
+		HTTP_HOST: 127.0.0.1:8000
+		SCRIPT_NAME: 
+		HTTP_ACCEPT: application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+		wsgi.version: (1, 0)
+		wsgi.run_once: False
+		wsgi.errors: <open file '<stderr>', mode 'w' at 0x100282270>
+		wsgi.multiprocess: False
+		HTTP_ACCEPT_LANGUAGE: en-US,en;q=0.8
+		__CF_USER_TEXT_ENCODING: 0x1F5:0:0
+		USER: jisiguo
+		LOGNAME: jisiguo
+		PATH_INFO: /
+		QUERY_STRING: 
+		PATH: /usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+		HTTP_ACCEPT_CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+		TERM: xterm-color
+		HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.68 Safari/534.24
+		HTTP_CONNECTION: keep-alive
+		SERVER_NAME: localhost
+		REMOTE_ADDR: 127.0.0.1
+		SHLVL: 1
+		wsgi.url_scheme: http
+		CONTENT_LENGTH: 
+		SSH_AUTH_SOCK: /tmp/launch-7KmjqS/Listeners
+		wsgi.input: <socket._fileobject object at 0x10234aed0>
+		Apple_PubSub_Socket_Render: /tmp/launch-rOFlsA/Render
+		wsgi.multithread: True
+		TZ: America/New_York
+		_: /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+		GATEWAY_INTERFACE: CGI/1.1
+		OLDPWD: /Users/jisiguo
+		PWD: /Users/jisiguo/desktop/osqa
+		DJANGO_SETTINGS_MODULE: osqa.settings
+		CONTENT_TYPE: text/plain
+		wsgi.file_wrapper: <class 'django.core.servers.basehttp.FileWrapper'>
+		REMOTE_HOST: 
+		HTTP_ACCEPT_ENCODING: gzip,deflate,sdch
+		COMMAND_MODE: unix2003
+
+        COOKIES:
+        None
+        EXCEPTION INFO:
+        		Traceback (most recent call last):
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/handlers/base.py", line 89, in get_response
+		    response = middleware_method(request)
+		  File "/Users/jisiguo/Desktop/osqa/forum/middleware/anon_user.py", line 34, in process_request
+		    msg = _('First time here? Check out the <a href="%s">FAQ</a>!') % reverse('faq')
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 391, in reverse
+		    *args, **kwargs)))
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 312, in reverse
+		    possibilities = self.reverse_dict.getlist(lookup_view)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 229, in _get_reverse_dict
+		    self._populate()
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 208, in _populate
+		    for name in pattern.reverse_dict:
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 229, in _get_reverse_dict
+		    self._populate()
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 197, in _populate
+		    for pattern in reversed(self.url_patterns):
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 279, in _get_url_patterns
+		    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 274, in _get_urlconf_module
+		    self._urlconf_module = import_module(self.urlconf_name)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/utils/importlib.py", line 35, in import_module
+		    __import__(name)
+		  File "/Users/jisiguo/Desktop/osqa/forum/urls.py", line 23, in <module>
+		    url(r'^%s(.*)' % _('nimda/'), admin.site.root),
+		AttributeError: 'AdminSite' object has no attribute 'root'
+		
+
+        
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/handlers/base.py TIME: 2011-05-25 15:31:25,847 MSG: base.py:handle_uncaught_exception:209 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/middleware/common.py", line 67, in process_request
+    if (not _is_valid_path(request.path_info, urlconf) and
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/middleware/common.py", line 154, in _is_valid_path
+    urlresolvers.resolve(path, urlconf)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 342, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 252, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 250, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 279, in _get_url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 274, in _get_urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/jisiguo/Desktop/osqa/forum/urls.py", line 23, in <module>
+    url(r'^%s(.*)' % _('nimda/'), admin.site.root),
+AttributeError: 'AdminSite' object has no attribute 'root'
+/Users/jisiguo/Desktop/osqa/forum/views/meta.py TIME: 2011-05-25 15:31:25,852 MSG: meta.py:error_handler:200 
+        error executing request:
+        PATH: /favicon.ico
+        USER: <anonymous>
+        METHOD: GET
+        POST PARAMETERS:
+        None
+        GET PARAMETERS:
+        None
+        HTTP HEADERS:
+        		RUN_MAIN: true
+		SERVER_SOFTWARE: WSGIServer/0.1 Python/2.7.1
+		TERM_PROGRAM_VERSION: 273.1
+		REQUEST_METHOD: GET
+		SERVER_PROTOCOL: HTTP/1.1
+		HOME: /Users/jisiguo
+		DISPLAY: /tmp/launch-6uoSL9/org.x:0
+		TERM_PROGRAM: Apple_Terminal
+		LANG: en_US.UTF-8
+		SHELL: /bin/bash
+		TMPDIR: /var/folders/J0/J074dEMLEtipktHjkwusKk+++TI/-Tmp-/
+		SERVER_PORT: 8000
+		HTTP_HOST: 127.0.0.1:8000
+		SCRIPT_NAME: 
+		HTTP_ACCEPT: */*
+		wsgi.version: (1, 0)
+		wsgi.run_once: False
+		wsgi.errors: <open file '<stderr>', mode 'w' at 0x100282270>
+		wsgi.multiprocess: False
+		HTTP_ACCEPT_LANGUAGE: en-US,en;q=0.8
+		__CF_USER_TEXT_ENCODING: 0x1F5:0:0
+		USER: jisiguo
+		LOGNAME: jisiguo
+		PATH_INFO: /favicon.ico
+		QUERY_STRING: 
+		PATH: /usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+		HTTP_ACCEPT_CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+		TERM: xterm-color
+		HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.68 Safari/534.24
+		HTTP_CONNECTION: keep-alive
+		SERVER_NAME: localhost
+		REMOTE_ADDR: 127.0.0.1
+		SHLVL: 1
+		wsgi.url_scheme: http
+		CONTENT_LENGTH: 
+		SSH_AUTH_SOCK: /tmp/launch-7KmjqS/Listeners
+		wsgi.input: <socket._fileobject object at 0x10234f150>
+		Apple_PubSub_Socket_Render: /tmp/launch-rOFlsA/Render
+		wsgi.multithread: True
+		TZ: America/New_York
+		_: /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+		GATEWAY_INTERFACE: CGI/1.1
+		OLDPWD: /Users/jisiguo
+		PWD: /Users/jisiguo/desktop/osqa
+		DJANGO_SETTINGS_MODULE: osqa.settings
+		CONTENT_TYPE: text/plain
+		wsgi.file_wrapper: <class 'django.core.servers.basehttp.FileWrapper'>
+		REMOTE_HOST: 
+		HTTP_ACCEPT_ENCODING: gzip,deflate,sdch
+		COMMAND_MODE: unix2003
+
+        COOKIES:
+        None
+        EXCEPTION INFO:
+        		Traceback (most recent call last):
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/handlers/base.py", line 89, in get_response
+		    response = middleware_method(request)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/middleware/common.py", line 67, in process_request
+		    if (not _is_valid_path(request.path_info, urlconf) and
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/middleware/common.py", line 154, in _is_valid_path
+		    urlresolvers.resolve(path, urlconf)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 342, in resolve
+		    return get_resolver(urlconf).resolve(path)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 252, in resolve
+		    sub_match = pattern.resolve(new_path)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 250, in resolve
+		    for pattern in self.url_patterns:
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 279, in _get_url_patterns
+		    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/core/urlresolvers.py", line 274, in _get_urlconf_module
+		    self._urlconf_module = import_module(self.urlconf_name)
+		  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Django-1.3-py2.7.egg/django/utils/importlib.py", line 35, in import_module
+		    __import__(name)
+		  File "/Users/jisiguo/Desktop/osqa/forum/urls.py", line 23, in <module>
+		    url(r'^%s(.*)' % _('nimda/'), admin.site.root),
+		AttributeError: 'AdminSite' object has no attribute 'root'
+		
+
+        
