@@ -196,7 +196,7 @@ blockquote {
 }
 
 #ground {
-    background: none repeat scroll 0 0 #BDCCED;
+    background: none repeat scroll 0 0 #EBEBEB;
     border-top: 1px solid #000000;
     padding-bottom: 0;
     padding-top: 6px;
@@ -425,7 +425,7 @@ blockquote {
 
 .votes, .views, .status {
 	
-	background-color: #EBEBEB;
+	background-color: #FCFCFC;
 	
 }
 
