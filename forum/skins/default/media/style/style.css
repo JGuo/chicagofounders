@@ -3,9 +3,9 @@
 body {
     /*overflow-y: scroll;
     height: 100%; */
-    background: none repeat scroll 0 0 #CCFFCC;
+    background: none repeat scroll 0 0 #ffffff;
     color: #000000;
-    font-family: sans-serif;
+    font-family: Arial;
     font-size: 12px;
     line-height: 150%;
     margin: 0;
@@ -43,7 +43,7 @@ hr {
 }
 
 input, select {
-    font-family: Trebuchet MS, "segoe ui", Helvetica, "Microsoft YaHei", Tahoma, Verdana, MingLiu, PMingLiu, Arial, sans-serif;
+    font-family: Arial, "segoe ui", Helvetica, "Microsoft YaHei", Tahoma, Verdana, MingLiu, PMingLiu, Arial, sans-serif;
     vertical-align: middle;
 }
 
@@ -155,6 +155,17 @@ blockquote {
     background-color: #FFF;
 }
 
+#wrapper {
+	
+	margin-top: 14px;
+}
+
+#roof-background {
+    width: 100%;
+	height: 100px;
+    background-color: #456AB4;
+}
+
 #roof {
     width: 990px;
 }
@@ -174,6 +185,8 @@ blockquote {
 #CARight {
     float: right;
     width: 240px;
+	position: relative;
+	top: 0px;
 }
 
 #CAFull {
@@ -183,7 +196,7 @@ blockquote {
 }
 
 #ground {
-    background: none repeat scroll 0 0 #BDCCED;
+    background: none repeat scroll 0 0 #EBEBEB;
     border-top: 1px solid #000000;
     padding-bottom: 0;
     padding-top: 6px;
@@ -193,10 +206,19 @@ blockquote {
 
 #top {
     float: right;
-    background-color: #FFFFFF;
+    background-color: #DCDCDC;
+	
+	position: relative;
+	left: 10px;
+	
     padding: 3px;
+	padding-right: 20px;
+	
     text-align: right;
-    width: 500px;
+    width: 345px;
+	
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 
 #top a {
@@ -205,26 +227,29 @@ blockquote {
     height: 35px;
     margin-left: 20px;
     text-align: right;
+	font-weight: bold;
     text-decoration: underline;
 }
 
 #logo {
     float: left;
     padding: 5px 0 0;
+	opacity: 0.15;
 }
 
 #nav {
     float: right;
-    margin: 35px 0px 0px 0px;
+    margin: 47px 0px 0px 0px;
     width: 750px;
+	height: 24px;
 }
 
 #nav a {
-    background-color: #E5EBF8;
+    background-color: #232323;
+  	color: #CCCCCC;
     border-color: #888888 #888888 -moz-use-text-color;
     border-style: solid solid none;
-    border-width: 1px 1px medium;
-    color: #333333;
+    border-width: 0px 0px medium;
     display: block;
     float: left;
     font-size: 14px;
@@ -241,6 +266,53 @@ blockquote {
 }
 
 #nav a.on {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #ffffff;
+    color: #323232;
+    font-weight: 600;
+    height: 24px;
+    line-height: 28px;
+    text-decoration: none;
+}
+
+#searchBarFrame{
+	
+	position: relative;
+	float: left;
+	width: 718px;
+	height: 100%;
+	
+	padding: 8px 8px 8px 10px;
+ 
+	
+	background-color: #456AB4;
+    border-color: #A0C5E2 #A9ACA5 #BABDB6 #EEEEEC;
+    border-style: solid;
+    border-width: 0px;
+}
+
+#searchBar a {
+    background-color: #E5EBF8;
+    border-color: #888888 #888888 -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #333333;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    height: 25px;
+    line-height: 30px;
+    margin-left: 10px;
+    padding: 0 12px 3px;
+    text-decoration: none;
+}
+
+#searchBar a:hover {
+    text-decoration: underline;
+}
+
+#searchBar a.on {
     background: none repeat scroll 0 0 #356FCB;
     border: 1px solid #356FCB;
     color: #FFFFFF;
@@ -250,53 +322,90 @@ blockquote {
     text-decoration: none;
 }
 
-#nav a#nav_ask {
-    float: right;
+
+#searchBar a#nav_ask {
+    background: none repeat scroll 0 0 #E5EBF8;
+	border-color: #EEEEEC #A9ACA5 #BABDB6 #EEEEEC;
+	border-style: solid;
+	border-width: 1px;
+	margin-bottom: 8px;
+	padding: 10px;
+	
+	float: right;
     color: #B02B2C;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
+
+	position: relative;
+
+	top: 0px;
+	left: 4px;
+	width: 218px;
+	height: 36px;
+	margin-left: 4px;
 }
 
-#nav a#nav_ask:hover {
+
+
+#searchBar a#nav_ask:hover {
     text-decoration: underline;
 }
 
-#nav a#nav_ask.on {
-   color: #FFFFFF;
+#searchBar a#nav_ask.on {
+   color: #456AB4;
+}
+
+#searchbar-background {
+	
+	width: 100%;
 }
 
 #searchBar {
     text-align: center;
-    background-color: #B6C4E2;
-    border-color: #EEEEEC #A9ACA5 #BABDB6 #EEEEEC;
-    border-style: solid;
-    border-width: 1px;
-    padding: 4px 0 0;
-    width: 988px;
+	margin-top: 8px;
+    width: 982px;
+	height: 42px;
+
 }
 
 #searchBar .content {
 }
 
 #searchBar .searchInput {
-    border: 0px;
-    padding: 3px;
+    
+	position: absolute;
+	
+	left: 6px;
+	right: 6px;
+	top: 6px;
+	bottom: 6px;
+	
+	padding-left: 8px;
+
+	border: 0px;
     font-size: 13px;
-    height: 18px;
-    width: 400px;
+	
 }
 
 #searchBar .searchBtn {
-    font-size: 14px;
-    height: 26px;
-    width: 80px;
+    
+	position: absolute;
+
+	font-size: 28px;
+    top: 16px;
+    width: 60px;
+	float: right;
+	right: 18px;
+	
 }
 
 #searchBar .options {
     color: #333333;
     font-size: 120%;
     padding: 3px 0;
+	visibility: hidden;
+	height: 0px;
 }
 
 #searchBar .options input {
@@ -313,6 +422,13 @@ blockquote {
     padding: 0 0;
     width: 100%;
 }
+
+.votes, .views, .status {
+	
+	background-color: #FCFCFC;
+	
+}
+
 
 .thousand {
     color: orange;
@@ -337,7 +453,7 @@ blockquote {
 
 .short-summary h2 a {
     color: #2A5594;
-    font-family: "Trebuchet MS", "segoe ui", arial, sans-serif;
+    font-family: "Arial", "segoe ui", arial, sans-serif;
     font-size: 17px;
 }
 
@@ -356,6 +472,8 @@ blockquote {
     margin-right: 0px;
     margin-top: 4px;
     padding-right: 2px;
+
+	
 }
 
 .short-summary .counts .item-count {
@@ -397,7 +515,7 @@ blockquote {
 
 .questions-count {
     color: #A40000;
-    font-family: sans-serif;
+    font-family: Arial;
     font-size: 24px;
     font-weight: 600;
     margin-top: 3px;
@@ -467,7 +585,7 @@ blockquote {
 }
 
 .paginator {
-    font: 12px sans-serif;
+    font: 12px Arial;
     padding: 5px 0 10px;
 }
 
@@ -475,7 +593,7 @@ blockquote {
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
     color: #777777;
-    font: bold 100% sans-serif;
+    font: bold 100% Arial;
     padding: 2px 4px 3px;
 }
 
@@ -512,7 +630,7 @@ blockquote {
 
 .paginator .text {
     color: #777777;
-    font: bold 100% sans-serif;
+    font: bold 100% Arial;
     padding: 0.3em;
 }
 
@@ -522,7 +640,7 @@ blockquote {
 
 .tags {
     display: block;
-    font-family: sans-serif;
+    font-family: Arial;
     line-height: 200%;
     margin-top: 5px;
 }
@@ -545,7 +663,7 @@ blockquote {
 }
 
 .tag-number {
-    font-family: sans-serif;
+    font-family: Arial;
     font-weight: 700;
 }
 
@@ -588,7 +706,8 @@ a.medal:hover {
     clear: both;
     height: 30px;
     margin-bottom: 3px;
-    width: 100%;
+    width: 738px;
+	float:left;
 }
 
 .tabsA {
@@ -609,7 +728,7 @@ a.medal:hover {
     float: left;
     height: 20px;
     line-height: 22px;
-    margin: 5px 4px 0 0;
+    margin: 0px 0px 0 0;
     text-decoration: none;
 }
 
@@ -657,7 +776,7 @@ a.medal:hover {
     font-weight: 700;
     height: 23px;
     line-height: 23px;
-    margin: 5px 0 0 5px;
+    margin: -2px 0 0 5px;
     padding: 0 6px 0 15px;
 }
 
@@ -786,12 +905,13 @@ ul.errorlist li {
     list-style-type: none;
     margin: 0;
     min-height: 360px;
+	width: 800px;
     padding: 0;
 }
 
 .tagsList li {
     float: left;
-    width: 235px;
+    width: 189px;
 }
 
 .badge-list {
@@ -944,7 +1064,7 @@ span.form-error {
 }
 
 .revision-number {
-    font-family: sans-serif;
+    font-family: Arial;
     font-size: 300%;
     font-weight: bold;
 }
@@ -1171,7 +1291,7 @@ ins {
 }
 
 .notify {
-    background-color: #F4A83D;
+    background-color: #DCDCDC;
     color: #444444;
     font-weight: bold;
     left: 0;
@@ -1181,6 +1301,7 @@ ins {
     top: 0;
     width: 100%;
     z-index: 100;
+
 }
 
 .notify p {
@@ -1767,6 +1888,7 @@ div.dialog.prompt .dialog-content select, div.dialog.prompt .dialog-content text
     width: 14px;
     height: 14px;
     display: inline-block;
+	margin-top: 2px;
 }
 
 div#subscription_list {
@@ -1805,7 +1927,7 @@ div.subscription_userinfo {
 }
 
 div.subscription_tags {
-    font-family: sans-serif;
+    font-family: Arial;
     float:left;
 }
 div.subscription_tags a, span.tag {
@@ -1829,4 +1951,58 @@ div.wmd-button {
 }
 div.wmd-button-bar {
     float:left;
+}
+
+a#nav_unanswered, a#nav_unanswered.on {
+	
+	position: relative;
+	float: right;
+	
+	top: -2px;
+	height: 28px;
+	text-align: center;
+	width: 216px;
+	
+}
+
+a#nav_questions, a#nav_questions.on {
+	
+	position:relative;
+	top: -14px;
+	
+	height: 40px;
+}
+
+a#nav_users, a#nav_users.on {
+	
+	position:relative;
+	top: -39px;
+
+	height: 65px;
+	
+}
+
+a#nav_tags, a#nav_tags.on {
+
+	position:relative;
+	top: -54px;
+	
+	height: 80px;
+	
+}
+
+a#nav_badges, a#nav_badges.on {
+
+	position:relative;
+	top: -4px;
+	
+	height: 30px;
+	
+}
+
+.userList {
+	
+	width: 800px;
+	float: left;
+	
 }
