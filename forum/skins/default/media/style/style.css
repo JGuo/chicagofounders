@@ -1,11 +1,47 @@
 @import "jquery.autocomplete.css";
 
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/bebasneue/BebasNeue-webfont.eot');
+    src: url('../fonts/bebasneue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('DroidSans-webfont.eot');
+    src: url('DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DroidSans-webfont.woff') format('woff'),
+         url('DroidSans-webfont.ttf') format('truetype'),
+         url('DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('DroidSans-Bold-webfont.eot');
+    src: url('DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DroidSans-Bold-webfont.woff') format('woff'),
+         url('DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     /*overflow-y: scroll;
     height: 100%; */
-    background: none repeat scroll 0 0 #CCFFCC;
-    color: #000000;
-    font-family: sans-serif;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #666666;
+    font-family: DroidSansRegular, helvetica, sans-serif;
     font-size: 12px;
     line-height: 150%;
     margin: 0;
@@ -43,7 +79,7 @@ hr {
 }
 
 input, select {
-    font-family: Trebuchet MS, "segoe ui", Helvetica, "Microsoft YaHei", Tahoma, Verdana, MingLiu, PMingLiu, Arial, sans-serif;
+    font-family: DroidSansRegular, sans-serif;
     vertical-align: middle;
 }
 
@@ -65,7 +101,7 @@ a {
 }
 
 .badges a {
-    color: #763333;
+    color: #a8eaff;
     text-decoration: underline;
 }
 
@@ -79,7 +115,8 @@ a:hover {
 
 .spacer3 {
     clear: both;
-    height: 30px;
+    /*height: 30px;*/
+	height: 100px;
     line-height: 30px;
     visibility: hidden;
 }
@@ -126,7 +163,7 @@ li input {
 
 pre {
     background-color: #F5F5F5;
-    font-family: Consolas, Monaco, Liberation Mono, Lucida Console, Monospace;
+    font-family: Consolas, Mono, Liberation Mono, Lucida Console, Monospace;
     font-size: 100%;
     margin-bottom: 10px;
     overflow: auto;
@@ -152,16 +189,41 @@ blockquote {
     margin: auto;
     padding: 0;
     width: 990px;
-    background-color: #FFF;
+    background-color: #FFFFFF;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+}
+
+#wrapper {
+	margin-top:143px;	
 }
 
 #roof {
     width: 990px;
+	height: 107px;
+	background-image: url("../images/topnav_banner2.png");
+	background-repeat: repeat-x;
+}
+
+#roof_wrapper {
+	background-color: #a8eaff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100px;
+	top: 0;
+}
+
+html, body {
+	height: 100%;
 }
 
 #room {
+	margin-top: 2px;
     background-color: #FFFFFF;
-    border-bottom: 1px solid #777777;
+    border-bottom: 1px solid #CCCCCC;
     padding: 10px 0;
 }
 
@@ -183,103 +245,152 @@ blockquote {
 }
 
 #ground {
-    background: none repeat scroll 0 0 #BDCCED;
-    border-top: 1px solid #000000;
+	box-shadow: -1px -3px 5px rgba(0, 0, 0, 0.5);
+    background-color: #05346f;
+    border: 1px solid #05346f;
     padding-bottom: 0;
     padding-top: 6px;
     text-align: center;
-    width: 990px;
+    width: 100%;
+	height: 100px;
+}
+
+/*#ground, .push {
+	height: 100px;
+}*/
+
+#ground a {
+	color: #ffffff;
 }
 
 #top {
     float: right;
-    background-color: #FFFFFF;
+    background-color: #a8eaff;
     padding: 3px;
     text-align: right;
     width: 500px;
 }
 
 #top a {
-    color: #333333;
+    color: #05346f;
     font-size: 12px;
     height: 35px;
     margin-left: 20px;
     text-align: right;
-    text-decoration: underline;
 }
 
 #logo {
     float: left;
     padding: 5px 0 0;
+	position: relative;
+	z-index: 1;
+	height: 0px;
+}
+
+#logo img {
+	height: 92px;
 }
 
 #nav {
     float: right;
-    margin: 35px 0px 0px 0px;
-    width: 750px;
+    margin: 0px;
+    width: 624px;
+	position: relative;
+	top: 49px;	
 }
 
 #nav a {
-    background-color: #E5EBF8;
-    border-color: #888888 #888888 -moz-use-text-color;
-    border-style: solid solid none;
+	/*border-radius: 5px 5px 5px 5px;*/
+    background-color: #05346f;
+    /*border-color: #9DFFAE;*/
+    /*border-style: solid solid none;*/
     border-width: 1px 1px medium;
-    color: #333333;
+    color: #ffffff;
     display: block;
     float: left;
     font-size: 14px;
-    font-weight: 400;
     height: 25px;
     line-height: 30px;
     margin-left: 10px;
-    padding: 0 12px 3px;
+    padding: 0px 12px 3px;
     text-decoration: none;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2) inset;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 #nav a:hover {
-    text-decoration: underline;
+	color: #a8eaff;
+	box-shadow: none;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;	
 }
 
 #nav a.on {
-    background: none repeat scroll 0 0 #356FCB;
-    border: 1px solid #356FCB;
-    color: #FFFFFF;
-    font-weight: 600;
-    height: 24px;
+    /*background: none repeat scroll 0 0 #CAFFCA;
+	box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+	border-right: none;
+    background: rgba(0, 0, 0, 0.04);*/
+    /*border: 1px solid;
+	border-color: #9DFFAE;
+	border-bottom: #CAFFCA;*/
+	box-shadow: none;
+    color: #a8eaff;
+	font-weight: bold;
+	background-color: #05346f;
+    height: 25px;
     line-height: 28px;
     text-decoration: none;
 }
 
 #nav a#nav_ask {
     float: right;
-    color: #B02B2C;
+    color: #ffffff;
     font-size: 14px;
-    font-weight: bold;
     text-decoration: none;
+    background-color: #05346f;
+	/*box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.2);*/
+	/*box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;*/
+    /*background: none repeat scroll 0 0 rgba(0, 0, 0, 0.04);*/
+	background-color: #05346f;
+    /*border: 1px solid #9DFFAE;*/
 }
 
 #nav a#nav_ask:hover {
-    text-decoration: underline;
+	color: #a8eaff;
 }
 
 #nav a#nav_ask.on {
-   color: #FFFFFF;
+   	color: #a8eaff;
+	font-weight: bold;
+	/*box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+   	border-right: none;
+   	background: rgba(0, 0, 0, 0.04);*/
 }
 
 #searchBar {
+	/*box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.5);*/
+	/*border-radius: 0px 0px 5px 5px;*/
+	border: 0px solid #05346f;
     text-align: center;
-    background-color: #B6C4E2;
-    border-color: #EEEEEC #A9ACA5 #BABDB6 #EEEEEC;
-    border-style: solid;
-    border-width: 1px;
-    padding: 4px 0 0;
-    width: 988px;
+    background-color: #05346f;
+    padding: 5px 0px 6px 0;
+    width: 100%;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	height: 30px;
 }
 
 #searchBar .content {
 }
 
 #searchBar .searchInput {
+	color: #05346f;
+	box-shadow: #E4FFE4 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 4px 0px inset;
+	border-radius: 3px;
+	background-color: #ffffff;
     border: 0px;
     padding: 3px;
     font-size: 13px;
@@ -288,15 +399,30 @@ blockquote {
 }
 
 #searchBar .searchBtn {
+	color: #ffffff;
+	background-color: #05346f;
+	border: 1px solid #05346f;
     font-size: 14px;
-    height: 26px;
+    height: 24px;
     width: 80px;
+	/*box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0px;*/
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+#searchBar .searchBtn:hover {
+	cursor: pointer;
+	color: #a8eaff;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 #searchBar .options {
-    color: #333333;
+    color: #227D35;
     font-size: 120%;
-    padding: 3px 0;
+    padding: 0px;
+    visibility: hidden;
+	height: 0px;
 }
 
 #searchBar .options input {
@@ -313,7 +439,7 @@ blockquote {
     padding: 0 0;
     width: 100%;
 }
-
+FFFFFF
 .thousand {
     color: orange;
 }
@@ -336,8 +462,8 @@ blockquote {
 }
 
 .short-summary h2 a {
-    color: #2A5594;
-    font-family: "Trebuchet MS", "segoe ui", arial, sans-serif;
+    color: #3060A8;
+    font-family: DroidSansRegular, sans-serif;
     font-size: 17px;
 }
 
@@ -369,7 +495,8 @@ blockquote {
 }
 
 .short-summary .votes, .short-summary .status, .short-summary .views {
-    -moz-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 3px;
+	border-radius: 3px;
     border-bottom: 1px solid #CCCCCC;
     border-right: 1px solid #CCCCCC;
     float: left;
@@ -396,8 +523,8 @@ blockquote {
 }
 
 .questions-count {
-    color: #A40000;
-    font-family: sans-serif;
+    color: #a8eaff;
+    font-family: DroidSansRegular, sans-serif;
     font-size: 24px;
     font-weight: 600;
     margin-top: 3px;
@@ -405,8 +532,14 @@ blockquote {
     padding: 0 0 5px 0;
 }
 
+.questions-count span {
+	color: #ffffff !important;
+}
+
 .boxA {
-    background: none repeat scroll 0 0 #888A85;
+	border-radius: 3px;
+    background: #05346f;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;
     margin-bottom: 8px;
     padding: 6px;
 }
@@ -433,12 +566,18 @@ blockquote {
 }
 
 .boxC {
-    background: none repeat scroll 0 0 #E5EBF8;
-    border-color: #EEEEEC #A9ACA5 #BABDB6 #EEEEEC;
-    border-style: solid;
-    border-width: 1px;
+	border-radius: 3px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.04);
+	background-color: #05346f;
+    border: 1px solid #05346f;
     margin-bottom: 8px;
     padding: 10px;
+	color: #cccccc;
+}
+
+.boxC a {
+	color: #a8eaff;
 }
 
 .boxC p {
@@ -468,7 +607,7 @@ blockquote {
 
 .paginator {
     font: 12px sans-serif;
-    padding: 5px 0 10px;
+    padding: 10px 0 10px;
 }
 
 .paginator .prev a, .paginator .prev a:visited, .paginator .next a, .paginator .next a:visited {
@@ -522,7 +661,7 @@ blockquote {
 
 .tags {
     display: block;
-    font-family: sans-serif;
+    font-family: DroidSansRegular, sans-serif;
     line-height: 200%;
     margin-top: 5px;
 }
@@ -537,6 +676,7 @@ blockquote {
     padding: 1px 8px;
     text-decoration: none;
     white-space: nowrap;
+	border-radius: 3px;
 }
 
 .tags a:hover {
@@ -545,7 +685,7 @@ blockquote {
 }
 
 .tag-number {
-    font-family: sans-serif;
+    font-family: DroidSansRegular, sans-serif;
     font-weight: 700;
 }
 
@@ -584,7 +724,7 @@ a.medal:hover {
 
 .tabBar {
     background-color: #FFFFFF;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #FFFFFF;
     clear: both;
     height: 30px;
     margin-bottom: 3px;
@@ -611,6 +751,7 @@ a.medal:hover {
     line-height: 22px;
     margin: 5px 4px 0 0;
     text-decoration: none;
+	border-radius: 3px;
 }
 
 .tabsA a {
@@ -629,9 +770,11 @@ a.medal:hover {
     margin: 2px;
 }
 
-.tabsA a.on, .tabsA a:hover {
-    background: none repeat scroll 0 0 #FFFFFF;
-    color: #A40000;
+.tabsA a.on {
+	box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+	border-right: none;
+    background: rgba(0, 0, 0, 0.04);
+    color: #356FCB;
 }
 
 .tabsA a:hover {
@@ -944,7 +1087,7 @@ span.form-error {
 }
 
 .revision-number {
-    font-family: sans-serif;
+    font-family: DroidSansRegular, sans-serif;
     font-size: 300%;
     font-weight: bold;
 }
@@ -964,14 +1107,14 @@ ins {
 
 .count {
     color: #777777;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 200%;
     font-weight: 700;
 }
 
 .scoreNumber {
     color: #777777;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 35px;
     font-weight: 800;
     line-height: 40px;
@@ -1013,7 +1156,7 @@ ins {
     background-color: #EEEEEE;
     color: #555555;
     float: left;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 110%;
     font-weight: bold;
     height: 15px;
@@ -1026,7 +1169,7 @@ ins {
 
 .vote-count {
     color: #777777;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 160%;
     font-weight: 700;
 }
@@ -1098,18 +1241,22 @@ ins {
 }
 
 .bronze, .badge3 {
-    color: #CC9933;
+    color: #996923;
 }
 
 .score {
-    color: #333333;
+    color: #05346f;
     font-size: 110%;
     font-weight: bold;
     margin-left: 3px;
 }
 
+.badgecount {
+	color: #05346f;
+}
+
 .footerLinks {
-    color: #3060A8;
+    color: #ffffff;
     font-size: 13px;
 }
 
@@ -1153,17 +1300,24 @@ ins {
 }
 
 .submit {
-    background-color: #D4D0C8;
-    border: 1px solid #777777;
+	color: #05346f;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;
+	border-radius: 3px;
+    background-color: #EAF3FF;
+    border: 1px solid #D1EAFF;
     cursor: pointer;
     font-size: 120%;
     font-weight: bold;
     height: 40px;
     padding-bottom: 4px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 .submit:hover {
-    text-decoration: underline;
+	background-color: #D1EAFF;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 .ask-body {
@@ -1346,7 +1500,7 @@ ul.form-horizontal-rows li input {
 }
 
 #tagSelector {
-    padding-bottom: 2px;
+    padding-bottom: 5px;
 }
 
 #hideIgnoredTagsControl {
@@ -1358,17 +1512,23 @@ ul.form-horizontal-rows li input {
 }
 
 a.sidebar_button {
-    background: none repeat scroll 0 0 #EEEEEE;
-    color: black;
+	color: #05346f;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;
+	border-radius: 3px;
+    background-color: #EAF3FF;
+    border: 1px solid #D1EAFF;
     cursor: pointer;
     font-size: 11px;
     padding: 3px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 a.sidebar_button:hover {
-    background-color: #777777;
-    color: white;
-    text-decoration: none;
+	text-decoration: none;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	background-color: #D1EAFF;
 }
 
 a.post-vote, .favorite-mark, a.accept-answer {
@@ -1414,7 +1574,7 @@ a.accept-answer.on, a.accept-answer:hover {
 
 .post-score, .comments-char-left-count {
     color: #777777;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 165%;
     font-weight: bold;
     padding: 0 0 3px;
@@ -1430,7 +1590,7 @@ a.accept-answer.on, a.accept-answer:hover {
 
 .favorite-count {
     color: #777777;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 100%;
     font-weight: bold;
     padding: 0;
@@ -1464,7 +1624,7 @@ a.accept-answer.on, a.accept-answer:hover {
 
 .comment-score {
     color: #777777;
-    font-family: Arial;
+    font-family: DroidSansRegular, Arial;
     font-size: 16px;
     font-weight: bold;
     padding-top: 3px;
@@ -1573,17 +1733,23 @@ div.comment-tools .comments-showing {
 }
 
 div.comment-tools a {
-    background: none repeat scroll 0 0 #EEEEEE;
-    color: black;
+	color: #05346f;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;
+	border-radius: 3px;
+    background-color: #EAF3FF;
+    border: 1px solid #D1EAFF;
     cursor: pointer;
     font-size: 11px;
     padding: 3px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 div.comment-tools a:hover {
-    background-color: #777777;
-    color: white;
-    text-decoration: none;
+	text-decoration: none;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	background-color: #D1EAFF;
 }
 
 .action-link {
@@ -1629,11 +1795,24 @@ div.comment-tools a:hover {
     float: right;
 }
 
+.comment-form-buttons input:hover, .user-prompt .prompt-buttons button:hover  {
+	cursor: pointer;
+	background-color: #D1EAFF;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
 .comment-form-buttons input, .user-prompt .prompt-buttons button {
     height: 16px;
     line-height: 12px;
     font-size: 110%;
-    border: 1px solid #999;
+	color: #05346f;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px 0px;
+	border-radius: 3px;
+    background-color: #EAF3FF;
+    border: 1px solid #D1EAFF;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
 }
 
 .comment-form-buttons input {
@@ -1805,7 +1984,7 @@ div.subscription_userinfo {
 }
 
 div.subscription_tags {
-    font-family: sans-serif;
+    font-family: DroidSansRegular, sans-serif;
     float:left;
 }
 div.subscription_tags a, span.tag {
